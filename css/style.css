@@ -2,6 +2,8 @@ body {font-family: Arial, Helvetica, sans-serif,}
 
 /* Style the navigation bar */
 nav {
+  font-family: system-ui;
+  background: #bd6a2a;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +39,7 @@ nav a:hover {
 
 #best-cover-img {
   width: 200px;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -100,8 +102,8 @@ a:hover {
 
 /* Remove default button styles */
 button {
-  background-color: transparent;
-  border: none;
+  background-color: #fff;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -123,7 +125,7 @@ button {
 
 #modal-cover {
   width: 200px;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -138,7 +140,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: #bd6a2a;
   color: #fff;
 }
 
