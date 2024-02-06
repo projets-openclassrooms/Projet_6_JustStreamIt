@@ -1,7 +1,5 @@
 const api_url = "http://localhost:8000/api/v1/titles/";
-let more-info-btn = document.getElementById("more-info-btn");
-more-info-btn.addEventListener("click", function(){console.log("click button")});
-
+const
 async function fetchHighestRatedMovie() {
     return fetch(api_url + "?sort_by=-imdb_score")
     .then(response=>response.json())
@@ -41,9 +39,7 @@ fetchBestMovie();
 // button
 
 // fetch Top Rated Movies (number <=7)
-for (let compteur = 0; compteur < 8; compteur++ ) {
-    console.log(compteur)
-}
+
 // fetch Best Movies cat 1 (number <=7)
 // fetch Best Movies cat 2 (number <=7)
 // fetch Best Movies cat 3 (number <=7)
