@@ -10,8 +10,8 @@ nav {
 
 /* Style the logo */
 #logo {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
 }
 
 /* Style the navigation links */
@@ -79,13 +79,8 @@ nav a:hover {
 
 /* Set global font, background color, etc. */
 body {
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-	line-height: 1.6;
-	color: #4a4a4a;
-	font-family: sans-serif;
-	background: #faefee;
+  font-family: sans-serif;
+  background-color: #f5f5f5;
 }
 
 /* Set common styles for links */
