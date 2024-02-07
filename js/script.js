@@ -1,7 +1,5 @@
 const API_URL = "http://localhost:8000/api/v1/titles/";
-async function loadNames(){const response = await fetch(API_URL); const names = await response.json(); console.log(names);}
-
-loadNames();
+var total = 7
 function fetchBestMovie(){
     const cover = document.getElementById('movie-cover');
     cover.style.display = 'block';
