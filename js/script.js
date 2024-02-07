@@ -6,17 +6,18 @@ function fetchBestMovie(){
     const cover = document.getElementById('movie-cover');
     cover.style.display = 'block';
     let bestTitle = document.getElementByClassName("movie-cover")[0].getElementById("title")[0];
-    let bestDescription = document.document.getElementByClassName("movie-cover");
+    let bestImg = document.getElementByClassName("img-cover")[0].getElementByTagName("img")[0];
+    let bestDescription = document.getElementByClassName("movie-cover")[0];
     fetch(API_URL + "?sort_by=-imdb_score")
+    .then(response=> response.json())
+    .then(data =>{
+    bestTitle.innerHTML = data["results"][0]["title"];
+    bestImg.innerHTML = data["image_url"];
+     })
+    fetch(data["results"][0]["url"])
     .then((response)=> response.json())
-    .then((data) =>{
-    bestTitle.innerHTML = data["title"];
-    bestDescription.innerHTML = data["description"]; })
-    .catch(function(error){
-    cover.style.display = 'none';
-    console.log("Erreur dans la restitution", error);
+    .then(data =>{bestDescription.innerHTML = data["description"];})
     })
-    ;
     }
 
 // close carousel
@@ -50,7 +51,6 @@ $('div#modal').on('click',function(event){
 // fetch Best Movies cat 1 (number <=7)
 // fetch Best Movies cat 2 (number <=7)
 // fetch Best Movies cat 3 (number <=7)
-function main(){
+
 window.addEventListener('load',() =>{
 fetchBestMovie()});
-}
