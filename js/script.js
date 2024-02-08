@@ -22,30 +22,7 @@ function fetchBestMovie(TOP_URL){
     });
 }
 
-function fetchCategories(){
 
-// Création d'un élément div dynamique
-    var nouvelElementDiv = document.createElement("div");
-
-// Création d'un élément img
-    var nouvelleImage = document.createElement("img");
-    nouvelleImage.src = "";
-
-// Création d'un élément p pour le texte
-    var nouveauTexte = document.createElement("p");
-    nouveauTexte.textContent = "title";
-
-// Ajout de l'image et du texte à l'élément div
-    nouvelElementDiv.appendChild(nouvelleImage);
-    nouvelElementDiv.appendChild(nouveauTexte);
-
-// Sélection du div existant où vous souhaitez insérer le div dynamique
-    var divExistant = document.getElementById("id-du-div-existant");
-// Ajout du div dynamique au div existant
-    divExistant.appendChild(nouvelElementDiv);
-
-
-}
 // page_size=7
 // elements du DOM
 // insertion dynamique dans div
@@ -60,7 +37,7 @@ async function fetchAndPopulateMovies() {
         const filteredMoviesByGenre = desired_genres.map(genre => {
             return data.results.filter(movie => movie.genres.includes(genre));
         });
-
+        console.log(filteredMoviesByGenre);
         // Peupler les carrousels avec les films de chaque catégorie
         filteredMoviesByGenre.forEach((movies, index) => {
             const categoryCarousel = document.querySelector(`.category${index + 1} .${desired_genres[index].toLowerCase()}-carousel`);
@@ -95,6 +72,5 @@ async function fetchAndPopulateMovies() {
 
 window.addEventListener('load',() =>{
     fetchBestMovie(TOP_URL);
-    fetchCategories();
     fetchAndPopulateMovies();
 });
