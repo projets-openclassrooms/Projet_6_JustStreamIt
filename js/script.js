@@ -1,5 +1,7 @@
 const API_URL = "http://localhost:8000/api/v1/titles/";
 const TOP_URL = API_URL + "?format=json&sort_by=-imdb_score&genre"
+const URL_CATEGORIES = TOP_URL + "&page_size=7&imdb_score_max=10";
+const desired_genres = ['Drama', 'Action', 'Thriller', 'Comedy', 'Horror', 'Mystery', 'History', "Sci-Fy", "Romance" ];
 
 function fetchBestMovie(TOP_URL){
     const cover = document.getElementById('movie-cover');
@@ -27,7 +29,7 @@ function fetchCategories(){
 
 // Création d'un élément img
     var nouvelleImage = document.createElement("img");
-    nouvelleImage.src = "chemin/vers/votre/image.jpg";
+    nouvelleImage.src = "";
 
 // Création d'un élément p pour le texte
     var nouveauTexte = document.createElement("p");
@@ -47,13 +49,11 @@ function fetchCategories(){
 // page_size=7
 // elements du DOM
 // insertion dynamique dans div
-const URL_API = "http://127.0.0.1:8000/api/v1/titles/?page_size=7&imdb_score_max=10&sort_by=-imdb_score&genre";
-const desired_genres = ['Drama', 'Action', 'Thriller', 'Comedy', 'Horror', 'Mystery', 'History', "Sci-Fy", "Romance" ];
 
 // Fonction pour récupérer les films depuis l'API et les peupler dans les carrousels
 async function fetchAndPopulateMovies() {
     try {
-        const response = await fetch(URL_API);
+        const response = await fetch(URL_CATEGORIES);
         const data = await response.json();
 
         // Filtrer les films par genre
@@ -80,12 +80,6 @@ async function fetchAndPopulateMovies() {
     }
 }
 
-// Appeler la fonction pour récupérer et peupler les films
-fetchAndPopulateMovies();
-
-// Top rated by category
-
-
 
 // button
 
@@ -102,4 +96,5 @@ fetchAndPopulateMovies();
 window.addEventListener('load',() =>{
     fetchBestMovie(TOP_URL);
     fetchCategories();
+    fetchAndPopulateMovies();
 });
