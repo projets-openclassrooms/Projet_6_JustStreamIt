@@ -31,7 +31,7 @@ function fetchCategories(){
 
 // Création d'un élément p pour le texte
     var nouveauTexte = document.createElement("p");
-    nouveauTexte.textContent = "Votre texte ici";
+    nouveauTexte.textContent = "title";
 
 // Ajout de l'image et du texte à l'élément div
     nouvelElementDiv.appendChild(nouvelleImage);
@@ -47,6 +47,41 @@ function fetchCategories(){
 // page_size=7
 // elements du DOM
 // insertion dynamique dans div
+const URL_API = "http://127.0.0.1:8000/api/v1/titles/?page_size=7&imdb_score_max=10&sort_by=-imdb_score&genre";
+const desired_genres = ['Drama', 'Action', 'Thriller', 'Comedy', 'Horror', 'Mystery', 'History', "Sci-Fy", "Romance" ];
+
+// Fonction pour récupérer les films depuis l'API et les peupler dans les carrousels
+async function fetchAndPopulateMovies() {
+    try {
+        const response = await fetch(URL_API);
+        const data = await response.json();
+
+        // Filtrer les films par genre
+        const filteredMoviesByGenre = desired_genres.map(genre => {
+            return data.results.filter(movie => movie.genres.includes(genre));
+        });
+
+        // Peupler les carrousels avec les films de chaque catégorie
+        filteredMoviesByGenre.forEach((movies, index) => {
+            const categoryCarousel = document.querySelector(`.category${index + 1} .${desired_genres[index].toLowerCase()}-carousel`);
+
+            movies.forEach(movie => {
+                const movieElement = document.createElement('div');
+                movieElement.classList.add('movie');
+                movieElement.innerHTML = `
+                    <img src="${movie.image_url}" alt="${movie.title}">
+                    <h3>${movie.title}</h3>
+                `;
+                categoryCarousel.appendChild(movieElement);
+            });
+        });
+    } catch (error) {
+        console.error('Une erreur s\'est produite lors de la récupération des données :', error);
+    }
+}
+
+// Appeler la fonction pour récupérer et peupler les films
+fetchAndPopulateMovies();
 
 // Top rated by category
 
@@ -66,4 +101,5 @@ function fetchCategories(){
 
 window.addEventListener('load',() =>{
     fetchBestMovie(TOP_URL);
+    fetchCategories();
 });
