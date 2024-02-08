@@ -53,7 +53,7 @@ async function fetchAndPopulateMovies() {
             });
         });
     } catch (error) {
-      console.error(error)
+      console.error(error);
       }
 }
 
