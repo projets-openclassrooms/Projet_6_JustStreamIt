@@ -3,7 +3,7 @@ body {font-family: Crimson Pro, Roboto, sans-serif,}
 /* Style the navigation bar */
 nav {
   display: flex;
-  background: #00e1ff;
+  background: #000000;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -136,7 +136,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #00e1ff;
+  background-color: #000000;
   color: #fff;
 }
 

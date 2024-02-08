@@ -17,7 +17,11 @@ function fetchBestMovie(){
     .then(data =>{bestDescription.innerHTML = data["description"];})
     })
     }
+async function bestMovie(){
+    let params = {sort_by:"-imdb_score"}
+    let movie = (await getData(url, params)).data.results[0];
 
+}
 // close carousel
 $('div#modal').on('click',function(event){
     event.preventDefault();
