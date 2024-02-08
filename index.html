@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <title>Just Stream It !</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/carousel.js" ></script>
 
     <script type="text/javascript" src="js/script.js" ></script>
-        <script type="text/javascript" src="js/carousel.js" ></script>
+
 
 </head>
 <body>
@@ -28,18 +29,43 @@
     <main>
         <section class="best" id="movie-cover">
             <div class="movie-cover">
-                <img alt="best movie cover" id="best-cover-img" class="img-cover">
-                <h1 id="title"></h1>
-                <p id="best-cover-description"></p>
+                <img alt="best movie cover" id="best-movie-img" class="img-cover">
+                <h1 id="titlebestmovies"></h1>
+                <p id="best-movie-description"></p>
             </div>
             <div>
                 <button class="button-play">Play</button>
                 <button class="button-info" id="more-info-btn">More infos</button>
             </div>
         </section>
-
+        <section class="top-rated" id="top-rated-movies">
             <div class="carousel-container">
-
+                <h2 id="title-best-movies">Top rated movies</h2>
+                    <div class="best-carousel"></div>
+                    <button class="carousel-prev">&lt;</button>
+                    <button class="carousel-next">&gt;</button>
+            </div>
+        </section>
+        <section class="category1" id="first-category">
+            <div class="carousel-container">
+                <h2 id="title-best-sci-fi-movies">Best Sci-Fi movies</h2>
+                    <div class="sci-fi-carousel"></div>
+                    <button class="carousel-prev">&lt;</button>
+                    <button class="carousel-next">&gt;</button>
+            </div>
+        </section>
+        <section class="category2" id="second-category">
+            <div class="carousel-container">
+                <h2 id="title-best-comedy-movies">Best Comedy movies</h2>
+                    <div class="comedy-carousel"></div>
+                    <button class="carousel-prev">&lt;</button>
+                    <button class="carousel-next">&gt;</button>
+            </div>
+        </section>
+        <section class="category3" id="third-category">
+            <div class="carousel-container">
+                <h2 id="title-best-romance-movies">Best Romance movies</h2>
+                    <div class="romance-carousel"></div>
                     <button class="carousel-prev">&lt;</button>
                     <button class="carousel-next">&gt;</button>
 
