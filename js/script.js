@@ -1,7 +1,7 @@
 const API_URL = "http://localhost:8000/api/v1/titles/";
 const TOP_URL = API_URL + "?format=json&sort_by=-imdb_score&genre"
 const URL_CATEGORIES = TOP_URL + "&page_size=7&imdb_score_max=10";
-const desired_genres = ['Drama', 'Action', 'Thriller', 'Comedy', 'Horror', 'Mystery', 'History', "Sci-Fy", "Romance" ];
+const desired_genres = ['Sci-Fi', 'Comedy','Romance', 'Thriller',  'Horror', 'Mystery', 'History','Drama', 'Action' ];
 
 function fetchBestMovie(TOP_URL){
     const cover = document.getElementById('movie-cover');
@@ -53,8 +53,8 @@ async function fetchAndPopulateMovies() {
             });
         });
     } catch (error) {
-        console.error('Une erreur s\'est produite lors de la récupération des données :', error);
-    }
+      console.error(error)
+      }
 }
 
 
