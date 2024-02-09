@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <title>Just Stream It !</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
     <script type="text/javascript" src="js/script.js" ></script>
 
@@ -16,13 +16,15 @@
 </head>
 <body>
     <header>
-        <nav role = "navigation">
-            <a href="index.html" class="icons">
-                <img src="images/logo.png" alt="Logo JustStreamIt" id="logo">
-            </a>
+        <nav role = "navigation"
             <div>
-                <a href="index.html">Home</a>
+                <a href="index.html" class="icons">
+                    <img src="images/logo.png" alt="Logo JustStreamIt" id="logo">
+                </a>
+                <a href="index.html" class="menu"> Home </a>
+                <a href="#"  class="menu"> Categories</a>
             </div>
+            <input type="text" class="search" placeholder="Rechercher un film ou une série" >
         </nav>
     </header>
     <main>
@@ -32,6 +34,7 @@
                 <h1 id="titlebestmovies"></h1>
                 <p id="best-movie-description"></p>
             </div>
+
             <div>
                 <button class="button-play">Play</button>
                 <button class="button-info" id="more-info-btn">More infos</button>
