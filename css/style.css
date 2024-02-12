@@ -25,7 +25,7 @@ header {
 nav a {
   margin-right: 1rem;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius:  5px 5px 5px 5px;
 }
 .menu{
   font-size: 36px;;
@@ -45,11 +45,24 @@ nav a:hover {
   background-color: #fff;
   border-radius: 5px;
 }
+.movie{
 
-#best-cover-img {
+}
+.cover-img {
   width: 200px;
   height: 300px;
   object-fit: cover;
+  -webkit-column-count: 7;
+-moz-column-count: 7;
+column-count: 7;
+-webkit-column-gap: 3px;
+-moz-column-gap: 3px;
+column-gap: 3px;
+-webkit-column-rule: 1px solid rgba(28,110,164,0.22);
+-moz-column-rule: 1px solid rgba(28,110,164,0.22);
+column-rule: 1px solid rgba(28,110,164,0.22);
+
+
 }
 
 #best-cover-title {
@@ -77,7 +90,15 @@ position: absolute;
   max-width: 1200px;
   margin: 0 auto;
   flex-direction: row-reverse; /* Inverser la direction du carousel */
-
+-webkit-column-count: 7;
+-moz-column-count: 7;
+column-count: 7;
+-webkit-column-gap: 3px;
+-moz-column-gap: 3px;
+column-gap: 3px;
+-webkit-column-rule: 5px solid rgba(28,110,164,0.22);
+-moz-column-rule: 5px solid rgba(28,110,164,0.22);
+column-rule: 5px solid rgba(28,110,164,0.22);
 }
 .search{
   padding: 8px;
@@ -147,7 +168,7 @@ button:hover {
 .modal-content {
   background-color: #fff;
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .close {

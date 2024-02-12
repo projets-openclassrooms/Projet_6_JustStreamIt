@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   const movieItem = document.createElement('div');
                   movieItem.classList.add('movie');
                   movieItem.innerHTML = `
-                      <img src="${movie.image_url}" alt="${movie.title}" onclick="showModal(${JSON.stringify(movie)})">
+                      <img src="${movie.image_url}" alt="${movie.title}" class="cover-img" onclick="showModal(${JSON.stringify(movie)})">
                       <h3>${movie.title}</h3>
                   `;
                   carousel.appendChild(movieItem);
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Fetch and populate carousel for Comedy movies
-  fetchAndPopulateCarousel('http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=action&page_size=7', 'comedyCarousel');
+  fetchAndPopulateCarousel('http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=thriller&page_size=7', 'thrillerCarousel');
 
   // Fetch and populate carousel for Sci-Fi movies
   fetchAndPopulateCarousel('http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=sci-fi&page_size=7', 'sciFiCarousel');
