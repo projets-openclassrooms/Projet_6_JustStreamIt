@@ -27,7 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Fetch and populate carousel for Romance movies
   fetchAndPopulateCarousel('http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=romance&page_size=7', 'romanceCarousel');
 
-  fetchAndPopulateCarousel('http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&score_max=10&page_size=7','');
+  // Fetch and populate carousel for top rated movies
+
+  fetchAndPopulateCarousel('http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&score_max=10&page_size=7&genre','Top_RatedCarousel');
 
   // Fetch and populate best of the bests
 
