@@ -42,10 +42,6 @@ function createMovieElement(movie) {
       openModal(movie.id);
   });
   movieElement.appendChild(moreButton);
-  // Vérifie si le containerId est "Best-movies" pour afficher le résumé
-  let bestDescription = document.getElementById("best-movie-description");
-  bestDescription.textContent = movie.description;
-  movieElement.appendChild(bestDescription);
 
   return movieElement;
 }

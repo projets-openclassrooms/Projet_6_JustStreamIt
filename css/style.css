@@ -31,6 +31,9 @@ nav {
     border-radius: 5px; /* Coins arrondis */
     padding: 10px; /* Marge intérieure */
     margin-bottom: 20px; /* Marge inférieure */
+    width: 100%;
+    height: auto;
+
 }
 /* display flex avec gap 20px */
 .movies {
