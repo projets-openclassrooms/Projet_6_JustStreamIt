@@ -57,27 +57,32 @@ function openModal(movieId) {
       const modal = document.getElementById('modal');
       const modalInfo = document.getElementById('modal-info');
       modalInfo.innerHTML = `<h2>${movie.title}</h2>
-                             <p><strong>Release Date:</strong> ${movie.year}</p>
+                             <p><strong>Date de sortie:</strong> ${movie.date_published}</p>
                              <p><strong>IMDb Score:</strong> ${movie.imdb_score}</p>`;
+      if (movie.image_url) {
+          modalInfo.innerHTML += `<img src=${movie.image_url}>`;
+      }
       
       if (movie.genres) {
           modalInfo.innerHTML += `<p><strong>Genre:</strong> ${movie.genres.join(', ')}</p>`;
       }
 
       if (movie.directors) {
-          modalInfo.innerHTML += `<p><strong>Director:</strong> ${movie.directors.join(', ')}</p>`;
+          modalInfo.innerHTML += `<p><strong>Réalisateur:</strong> ${movie.directors.join(', ')}</p>`;
       }
 
       if (movie.actors) {
-          modalInfo.innerHTML += `<p><strong>Actors:</strong> ${movie.actors.join(', ')}</p>`;
+          modalInfo.innerHTML += `<p><strong>Acteurs:</strong> ${movie.actors.join(', ')}</p>`;
       }
 
       if (movie.duration) {
-          modalInfo.innerHTML += `<p><strong>Duration:</strong> ${movie.duration} minutes</p>`;
+          modalInfo.innerHTML += `<p><strong>Durée:</strong> ${movie.duration} minutes</p>`;
       }
-
+      if (movie.reviews_from_users) {
+          modalInfo.innerHTML += `<p><strong>Note Spectateurs:</strong> ${movie.reviews_from_users}</p>`;
+      }
       if (movie.countries) {
-          modalInfo.innerHTML += `<p><strong>Country:</strong> ${movie.countries.join(', ')}</p>`;
+          modalInfo.innerHTML += `<p><strong>Pays (origine):</strong> ${movie.countries.join(', ')}</p>`;
       }
 
       if (movie.worldwide_gross_income) {
@@ -85,7 +90,7 @@ function openModal(movieId) {
       }
 
       if (movie.description) {
-          modalInfo.innerHTML += `<p><strong>Summary:</strong> ${movie.description}</p>`;
+          modalInfo.innerHTML += `<p><strong>Résumé:</strong> ${movie.description}</p>`;
       }
 
       modal.style.display = 'block';
@@ -103,7 +108,7 @@ function openModal(movieId) {
   })
   .catch(error => console.log('Error fetching movie details:', error));
 }
-  modal.style.display = 'block';
+  //modal.style.display = 'block';
 
   const closeButton = document.getElementsByClassName('close')[0];
   closeButton.addEventListener('click', function() {
