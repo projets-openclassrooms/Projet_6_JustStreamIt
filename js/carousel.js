@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
           .catch(error => console.error('Error fetching data:', error));
   }
 
-  // Fetch and populate carousel for Comedy movies
+  // Fetch and populate carousel for thriller movies
   fetchAndPopulateCarousel('http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=thriller&page_size=7', 'thrillerCarousel');
 
   // Fetch and populate carousel for Sci-Fi movies
