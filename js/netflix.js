@@ -113,7 +113,7 @@ function fetchMovies(category, apiUrl) {
 }
 
 function shiftCarousel(carousel, direction) {
-  const scrollDistance = 500; // Réglage de la distance de défilement,
+  const scrollDistance = 800; // Réglage de la distance de défilement,
   if (direction === "left") {
     carousel.scrollLeft -= scrollDistance;
   } else {
@@ -260,28 +260,27 @@ function scrollFunction() {
 }
 
 // Fonction pour remonter en haut de la page lorsque le bouton est cliqué
-document
-  .getElementById("btnScrollToTop")
-  .addEventListener("click", function () {
-    document.body.scrollTop = 0; // Pour Safari
-    document.documentElement.scrollTop = 0; // Pour les autres navigateurs
+    document
+    .getElementById("btnScrollToTop")
+    .addEventListener("click", function () {
+        document.body.scrollTop = 0; // Pour Safari
+        document.documentElement.scrollTop = 0; // Pour les autres navigateurs
   });
-document.getElementById("right").addEventListener("click", function () {
-  var moviesElement = document.querySelector(".movies");
-  var currentLeft = parseInt(
-    window.getComputedStyle(moviesElement).getPropertyValue("left")
-  );
-  moviesElement.style.left = currentLeft - 400 + "px";
-});
-document.getElementById("right").addEventListener("click", function() {
-  var moviesElement = document.querySelector(".movies");
-  var currentLeft = parseInt(window.getComputedStyle(moviesElement).getPropertyValue("left"));
-  moviesElement.style.left = (currentLeft - 400) + "px";
-});
-document.getElementById("left").addEventListener("click", function () {
-  var moviesElement = document.querySelector(".movies");
-  var currentLeft = parseInt(
-    window.getComputedStyle(moviesElement).getPropertyValue("left")
-  );
-  moviesElement.style.left = currentLeft + 400 + "px";
-});
+
+///* move to right */
+//document.getElementById("right").addEventListener("click", function () {
+//  var moviesElement = document.querySelector(".movies");
+//  var currentLeft = parseInt(
+//    window.getComputedStyle(moviesElement).getPropertyValue("left")
+//  );
+//  moviesElement.style.left = currentLeft - 800 + "px";
+//});
+//
+///* move to left */
+//document.getElementById("left").addEventListener("click", function () {
+//  var moviesElement = document.querySelector(".movies");
+//  var currentLeft = parseInt(
+//    window.getComputedStyle(moviesElement).getPropertyValue("left")
+//  );
+//  moviesElement.style.left = currentLeft + 800 + "px";
+//});
