@@ -24,50 +24,114 @@
                     </div>
                 </div>
             </div>
-            <input type="text" class="search" placeholder="Rechercher un film ou une série">
+            <input type="text" class="search" placeholder="Rechercher un film ou une sÃ©rie">
         </nav>
     </header>
     <div id="Best-movies" class="best-movies-container">
-        <h1>Best Movies</h1>
-        <p id="best-movie-description"></p>
-        <div class="movies" style = "100%">
+        <div class="movies"></div>
+            <p id="best-movie-description"></p>
             <h1 id="bestTitle"</h1>
-            <button id="btn-best-movie"></button>
+
             <button id="button_play"></button>
-            <p id="bestDescription" style = "50%"></p>
-            <img src="" id="bestImage"/>
+            <p id="bestDescription"></p>
+            <div id="best">
+                <div class="bestCover-in-top"></div>
+                    <img src=""  class="bestCover" id="bestImage"/>
+                    <div class="bestCover-in-middle">
+                        <button id="btn-best-movie" ></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="top-movies" class="movies-container">
-        <h2>Top Movies</h2>
-              <div class="movies">
-        <div id="left" class="button-overlay left">&#9664;</div>
-        <div id="right" class="button-overlay right">&#9654;</div>
-      </div>
+
+   
+
+    <div   class="movies-container">
+        <h2>Films les mieux notés</h2>
+        <div id="" class="container">
+            <div class="carousel-view">
+              <button id="prev-btn" class="prev-btn">
+               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+          </svg>
+              </button>
+              <div  id="top-movies"    class="item-list">
+               
+                 
+                  </div>
+              <button id="next-btn" class="next-btn">
+                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
+            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+          </svg>
+                  </button>
+              </div>
+          </div>
     </div>
 
-    <div id="sci-fi-movies" class="movies-container">
-        <h2>Sci-Fi Movies</h2>
-              <div class="movies">
-        <div id="left" class="button-overlay left">&#9664;</div>
-        <div id="right" class="button-overlay right">&#9654;</div>
-      </div>
+    <div   class="movies-container">
+        <h2>Sci-fi  Movies</h2>
+        <div id="" class="container">
+            <div class="carousel-view">
+              <button id="prev-btn-sci-fi-movies" class="prev-btn">
+               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+          </svg>
+              </button>
+              <div  id="sci-fi-movies"    class="item-list">
+               
+                 
+                  </div>
+              <button id="next-btn-sci-fi-movies" class="next-btn">
+                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
+            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+          </svg>
+                  </button>
+              </div>
+          </div>
     </div>
-
-    <div id="romance-movies" class="movies-container">
+    <div   class="movies-container">
         <h2>Romance Movies</h2>
-              <div class="movies">
-        <div id="left" class="button-overlay left">&#9664;</div>
-        <div id="right" class="button-overlay right">&#9654;</div>
-      </div>
+        <div id="" class="container">
+            <div class="carousel-view">
+              <button id="prev-btn-romance-movies" class="prev-btn">
+               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+          </svg>
+              </button>
+              <div  id="romance-movies"    class="item-list">
+               
+                 
+                  </div>
+              <button id="next-btn-romance-movies" class="next-btn">
+                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
+            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+          </svg>
+                  </button>
+              </div>
+          </div>
     </div>
 
-    <div id="drama-movies" class="movies-container">
+    <div   class="movies-container">
         <h2>Drama Movies</h2>
-              <div class="movies">
-        <div id="left" class="button-overlay left">&#9664;</div>
-        <div id="right" class="button-overlay right">&#9654;</div>
-      </div>
+        <div id="" class="container">
+            <div class="carousel-view">
+              <button id="prev-btn-drama-movies" class="prev-btn">
+               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+          </svg>
+              </button>
+              <div  id="drama-movies"    class="item-list">
+               
+                 
+                  </div>
+              <button id="next-btn-drama-movies" class="next-btn">
+                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
+            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+          </svg>
+                  </button>
+              </div>
+          </div>
     </div>
 
     <div id="modal" class="modal">
