@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +8,66 @@
 </head>
 <body>
     <header>
-        <nav role = "navigation"
+        <nav role="navigation">
             <div>
                 <a href="index.html" class="icons">
                     <img src="images/logo.png" alt="Logo JustStreamIt" id="logo">
                 </a>
                 <a href="index.html" class="menu"> Accueil </a>
-                <a href="#"  class="menu"> Categories</a>
+                <div class="dropdown">
+                    <div class="dropdown-content">
+                        <a href="#Best-movies">Best Movies</a>
+                        <a href="#top-movies">Top Movies</a>
+                        <a href="#sci-fi-movies">Sci-Fi Movies</a>
+                        <a href="#romance-movies">Romance Movies</a>
+                        <a href="#drama-movies">Drama Movies</a>
+                    </div>
+                </div>
             </div>
-            <input type="text" class="search" placeholder="Rechercher un film ou une série" >
+            <input type="text" class="search" placeholder="Rechercher un film ou une série">
         </nav>
     </header>
-    <div id="Best-movies" class="movies-container">
+    <div id="Best-movies" class="best-movies-container">
         <h1>Best Movies</h1>
         <p id="best-movie-description"></p>
-        <div class="movies"></div>
+        <div class="movies" style = "100%">
+            <h1 id="bestTitle"</h1>
+            <button id="btn-best-movie"></button>
+            <button id="button_play"></button>
+            <p id="bestDescription" style = "50%"></p>
+            <img src="" id="bestImage"/>
+        </div>
     </div>
     <div id="top-movies" class="movies-container">
         <h2>Top Movies</h2>
-        <div class="movies"></div>
+              <div class="movies">
+        <div id="left" class="button-overlay left">&#9664;</div>
+        <div id="right" class="button-overlay right">&#9654;</div>
+      </div>
     </div>
 
     <div id="sci-fi-movies" class="movies-container">
         <h2>Sci-Fi Movies</h2>
-        <div class="movies"></div>
+              <div class="movies">
+        <div id="left" class="button-overlay left">&#9664;</div>
+        <div id="right" class="button-overlay right">&#9654;</div>
+      </div>
     </div>
 
     <div id="romance-movies" class="movies-container">
         <h2>Romance Movies</h2>
-        <div class="movies"></div>
+              <div class="movies">
+        <div id="left" class="button-overlay left">&#9664;</div>
+        <div id="right" class="button-overlay right">&#9654;</div>
+      </div>
     </div>
 
     <div id="drama-movies" class="movies-container">
         <h2>Drama Movies</h2>
-        <div class="movies"></div>
+              <div class="movies">
+        <div id="left" class="button-overlay left">&#9664;</div>
+        <div id="right" class="button-overlay right">&#9654;</div>
+      </div>
     </div>
 
     <div id="modal" class="modal">
@@ -50,9 +76,8 @@
             <div id="modal-info"></div>
         </div>
     </div>
-
-    <script src="js/bestmoviedescription.js"></script>
-
-    <script src="js/script.js"></script>
+    <button id="btnScrollToTop" class="scroll-to-top">&#9650</button>
+    <script src="js/netflix.js"></script>
+<!--    <script src="js/test_script.js"></script>-->
 </body>
 </html>

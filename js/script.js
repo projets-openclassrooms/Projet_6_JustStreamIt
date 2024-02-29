@@ -1,9 +1,10 @@
+baseUrl ="http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&page_size="
 document.addEventListener('DOMContentLoaded', function () {
-  fetchMovies("Best-movies", "http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&page_size=1");
-  fetchMovies("top-movies", "http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&page_size=7");
-  fetchMovies("sci-fi-movies", "http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=sci-fi&page_size=7");
-  fetchMovies("romance-movies", "http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=romance&page_size=7");
-  fetchMovies("drama-movies", "http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&genre=drama&page_size=7");
+  fetchMovies("Best-movies", baseUrl + "1");
+  fetchMovies("top-movies", baseUrl + "7");
+  fetchMovies("sci-fi-movies", baseUrl + "7&genre=sci-fi");
+  fetchMovies("romance-movies", baseUrl + "7&genre=romance");
+  fetchMovies("drama-movies", baseUrl + "7&genre=drama");
 });
 
 function fetchMovies(containerId, apiUrl) {
