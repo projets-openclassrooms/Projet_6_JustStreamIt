@@ -1,175 +1,249 @@
 /* Basic styles */
 nav {
-    background-color: #ccc; /* Couleur de fond gris barre navigation*/
-    border: 2px solid red; /* Liseré rouge */
-    padding: 10px; /* Marge intérieure */
+  background-color: #ccc; /* Couleur de fond gris barre navigation*/
+  border: 2px solid red; /* Liseré rouge */
+  padding: 10px; /* Marge intérieure */
 }
 
 .icons {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
-
+h2 {
+  text-align: center;
+}
 #logo {
-    width: 100px; /* Ajuster la taille du logo */
-    height: auto; /* Assurer la proportionnalité */
+  width: 100px; /* Ajuster la taille du logo */
+  height: auto; /* Assurer la proportionnalité */
 }
 
 .menu {
-    color: black; /* Couleur de texte noire */
-    text-decoration: none; /* Supprimer la décoration du lien */
-    margin-right: 20px; /* Espacement entre les éléments du menu */
+  color: black; /* Couleur de texte noire */
+  text-decoration: none; /* Supprimer la décoration du lien */
+  margin-right: 20px; /* Espacement entre les éléments du menu */
 }
 
 .search {
-    padding: 5px; /* Marge intérieure du champ de recherche */
-    border: 1px solid #999; /* Bordure grise */
+  padding: 5px; /* Marge intérieure du champ de recherche */
+  border: 1px solid #999; /* Bordure grise */
 }
+/* container global*/
 
-.movies-container {
-    border: 2px solid black; /* Bordure avec liseré noir du container des films*/
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px; /* Marge intérieure */
-    margin-bottom: 20px; /* Marge inférieure */
-    width: 100%;
-    height: auto;
-
+.best-movies-container {
+  position: relative;
+  text-align: left: 0;
+  /* display: flex; */
+  flex-flow: row wrap;
+  
+  height: 100%;
+  margin-top: 10%;
+  max-width: 10000px;
+  border-radius: 5px; /* Coins arrondis */
+  border: 5px solid black; /* Bordure avec liseré noir du container des films*/
 }
-/* display flex avec gap 20px */
+#best {
+  width: 29%;
+  height: 70%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  display:block;
+
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 7px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 7px 0px rgba(50, 50, 50, 0.75);
+}
+.bestCover-in-top
+{
+    width:100%;
+    height:75%;
+    position: relative;
+    background: #AEEAAE;
+}
+.bestCover-in-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EAC5B3;
+}
+#button_play {
+
+  font-size: 1.5em; /* Taille de la police augmentée */
+  padding: 15px 30px; /* Rembourrage plus grand */
+  border-radius: 5px; /* Coins arrondis */
+}
+#button_play:hover {
+  background-color: white;
+  color: rgb(255, 38, 0);
+  font-size: 1.1875em;
+  margin-left: 5px;
+ }
+#btn-best-movie {
+    /* width:100%;
+    height:44%;
+    background: rgb(255, 38, 0); */
+    width: 150px; 
+    height: 50px; 
+    border-radius: 5px; 
+    background-color: red;
+    color: white;
+    font-size: 0.9em; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#btn-best-movie:hover {
+  background-color: darkred;}
+
 .movies {
-    display: flex;
-    /* overflow-x: auto; */
-    gap: 20px;
+  border-radius: 5px; /* Coins arrondis */
+  display: flex;
+  /* overflow-x: auto; */
+  gap: 20px;
+}
+#bestImage {
+    position: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#bestDescription {
+  margin: 0;
+}
+.movies-container {
+  padding: 5px; /* Marge intérieure */
+  margin-bottom: 5px; /* Marge inférieure */
+  width: auto;
+  height: 50%;
+
 }
 
 .movie {
-    flex: 0 0 auto;
-    width: 200px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  flex: 0 0 auto;
+  width: 200px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .movie img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .movie-info {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* Modal styles */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 button{
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: red;
-    transition: all .3s ease-in-out;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: red;
+  transition: all .3s ease-in-out;
 }
 
 .container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+width: 100%;
+height: 80%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: white;
 }
 
 .carousel-view {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: 44px 0;
-  transition: all 0.25s ease-in;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+padding: 44px 0;
+transition: all 0.25s ease-in;
 }
 
 .carousel-view .item-list {
-  max-width: 950px;
-  width: 70vw;
-  padding: 50px 10px;
-  display: flex;
-  gap: 48px;
-  scroll-behavior: smooth;
-  transition: all 0.25s ease-in;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  overflow: auto;
-  scroll-snap-type: x mandatory;
+  
+max-width: 950px;
+width: 70vw;
+padding: 50px 10px;
+display: flex;
+gap: 48px;
+scroll-behavior: smooth;
+transition: all 0.25s ease-in;
+-ms-overflow-style: none; /* IE and Edge */
+scrollbar-width: none; /* Firefox */
+overflow: auto;
+scroll-snap-type: x mandatory;
 }
 
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .item-list::-webkit-scrollbar {
-  display: none;
+display: none;
 }
 
-.left,
-.right {
-  background = none;
-  cursor: pointer;
+.prev-btn*,
+.next-btn* {
+background = none;
+cursor: pointer;
 }
 .left {
-    left = 0;
+  left = 0;
 }
 .right {
-  right = 0;
+right = 0;
 }
 
-.bestImage {
-  scroll-snap-align: center;
-  min-width: 120px;
-  height: 120px;
-  background-color: deeppink;
-  border-radius:8px;
-}
 /* Styles pour le bouton "Haut de page" */
 .scroll-to-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
-    cursor: pointer;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: red;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 .scroll-to-top:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
