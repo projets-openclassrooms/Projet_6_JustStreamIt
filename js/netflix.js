@@ -1,19 +1,11 @@
 const baseUrl =
   "http://localhost:8000/api/v1/titles/?format=json&sort_by=-imdb_score&page_size=";
 
-  
 let category_1 = "top-movies";
 let category_2 = "sci-fi-movies";
 let category_3 = "romance-movies";
 let category_4 = "drama-movies";
 const list_categories = [category_1, category_2, category_3, category_4];
-// document.addEventListener("DOMContentLoaded", function () {
-//   fetchBestMovies("Best-movies", baseUrl + "1");
-//   fetchMovies(category_1, baseUrl + "7");
-//   fetchMovies(category_2, baseUrl + "7&genre=sci-fi");
-//   fetchMovies(category_3, baseUrl + "7&genre=romance");
-//   fetchMovies(category_4, baseUrl + "7&genre=drama");
-// });
 
 function fetchBestMovies(containerId, apiUrl) {
   fetch(apiUrl)
@@ -50,27 +42,7 @@ function fetchBestMovies(containerId, apiUrl) {
     });
 }
 
-// function fetchMovies(containerId, apiUrl) {
-//   fetch(apiUrl)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       const container = document
-//         .getElementById(containerId)
-//         .querySelector(".movies");
-
-//       data.results.forEach((movie, index) => {
-//         const movieElement = createMovieElement(movie, index, containerId);
-//         container.appendChild(movieElement);
-//         // console.log(index);
-//         // console.log(maListe[index]);
-//         // for (var i = 0; i < maListe.length; i++) {
-//         //   console.log(maListe[i]);}
-//       });
-//     })
-//     .catch((error) => console.log("Error fetching movies:", error));
-// }
 document.addEventListener("DOMContentLoaded", function () {
-  
   fetchBestMovies("Best-movies", baseUrl + "1");
   list_categories.forEach((category) => {
     fetchMovies(category, baseUrl + "7" + getGenreQueryString(category));
@@ -83,31 +55,13 @@ function fetchMovies(category, apiUrl) {
     .then((data) => {
       const container = document
         .getElementById(category)
-        .querySelector(".movies");
+
 
       data.results.forEach((movie, index) => {
         const movieElement = createMovieElement(movie, index, category);
         container.appendChild(movieElement);
       });
 
-      // Ajouter un gestionnaire d'événements pour chaque carrousel
-      const carousel = document
-        .getElementById(category)
-        .querySelector(".movies");
-      const prevButton = document
-        .getElementById(category)
-        .querySelector(".left");
-      const nextButton = document
-        .getElementById(category)
-        .querySelector(".right");
-
-      prevButton.addEventListener("click", function () {
-        shiftCarousel(carousel, "left");
-      });
-
-      nextButton.addEventListener("click", function () {
-        shiftCarousel(carousel, "right");
-      });
     })
     .catch((error) => console.log("Error fetching movies:", error));
 }
@@ -137,10 +91,8 @@ function getGenreQueryString(category) {
 }
 
 function createMovieElement(movie, index, containerId) {
-
-
-
   const movieElement = document.createElement("div");
+  movieElement.classList.add("item");
   movieElement.classList.add("movie");
 
   const containerIdElement = document.createElement("div");
@@ -151,12 +103,12 @@ function createMovieElement(movie, index, containerId) {
   movieElement.appendChild(titleElement);
 
   const imageElement = document.createElement("img");
-  imageElement.classList.add("image")
+  imageElement.classList.add("image");
   imageElement.src = movie.image_url;
   imageElement.alt = movie.title;
   imageElement.setAttribute("data-index", index); // Ajouter un attribut data-index pour suivre l'index
   movieElement.appendChild(imageElement);
-  console.log(containerId, "data-index", index);
+  // console.log(containerId, "data-index", index);
   const playButton = document.createElement("button");
   playButton.textContent = "Play";
   movieElement.appendChild(playButton);
@@ -260,27 +212,64 @@ function scrollFunction() {
 }
 
 // Fonction pour remonter en haut de la page lorsque le bouton est cliqué
-    document
-    .getElementById("btnScrollToTop")
-    .addEventListener("click", function () {
-        document.body.scrollTop = 0; // Pour Safari
-        document.documentElement.scrollTop = 0; // Pour les autres navigateurs
+document
+  .getElementById("btnScrollToTop")
+  .addEventListener("click", function () {
+    document.body.scrollTop = 0; // Pour Safari
+    document.documentElement.scrollTop = 0; // Pour les autres navigateurs
   });
 
-///* move to right */
-//document.getElementById("right").addEventListener("click", function () {
-//  var moviesElement = document.querySelector(".movies");
-//  var currentLeft = parseInt(
-//    window.getComputedStyle(moviesElement).getPropertyValue("left")
-//  );
-//  moviesElement.style.left = currentLeft - 800 + "px";
-//});
-//
-///* move to left */
-//document.getElementById("left").addEventListener("click", function () {
-//  var moviesElement = document.querySelector(".movies");
-//  var currentLeft = parseInt(
-//    window.getComputedStyle(moviesElement).getPropertyValue("left")
-//  );
-//  moviesElement.style.left = currentLeft + 800 + "px";
-//});
+//carrousel topmovies
+const prev = document.getElementById('prev-btn')
+const next = document.getElementById('next-btn')
+const list = document.getElementById('top-movies')
+
+const itemWidth = 150
+const padding = 10
+
+prev.addEventListener('click',()=>{
+  list.scrollLeft -= itemWidth + padding
+})
+
+next.addEventListener('click',()=>{
+  list.scrollLeft += itemWidth + padding
+})
+//caroussel sf
+const prevSF = document.getElementById('prev-btn-sci-fi-movies')
+const nextSF = document.getElementById('next-btn-sci-fi-movies')
+const listSF = document.getElementById('sci-fi-movies')
+
+
+prevSF.addEventListener('click',()=>{
+  listSF.scrollLeft -= itemWidth + padding
+})
+
+nextSF.addEventListener('click',()=>{
+  listSF.scrollLeft += itemWidth + padding
+})
+//caroussel romance
+const prev_romance = document.getElementById("prev-btn-romance-movies");
+const next_romance = document.getElementById("next-btn-romance-movies");
+const list_romance = document.getElementById("romance-movies");
+
+prev_romance.addEventListener("click", () => {
+  list_romance.scrollLeft -= itemWidth + padding;
+});
+
+next_romance.addEventListener("click", () => {
+  list_romance.scrollLeft += itemWidth + padding;
+});
+
+//caroussel drama
+const prev_drama = document.getElementById("prev-btn-drama-movies");
+const next_drama = document.getElementById("next-btn-drama-movies");
+const list_drama = document.getElementById("drama-movies");
+
+
+prev_drama.addEventListener("click", () => {
+  list_drama.scrollLeft -= itemWidth + padding;
+});
+
+next_drama.addEventListener("click", () => {
+  list_drama.scrollLeft += itemWidth + padding;
+});
