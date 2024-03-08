@@ -53,15 +53,12 @@ function fetchMovies(category, apiUrl) {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      const container = document
-        .getElementById(category)
-
+      const container = document.getElementById(category);
 
       data.results.forEach((movie, index) => {
         const movieElement = createMovieElement(movie, index, category);
         container.appendChild(movieElement);
       });
-
     })
     .catch((error) => console.log("Error fetching movies:", error));
 }
@@ -210,6 +207,11 @@ function scrollFunction() {
     document.getElementById("btnScrollToTop").style.display = "none";
   }
 }
+// toggle menu
+function toggleMenu() {
+  var menu = document.querySelector(".menu");
+  menu.classList.toggle("active");
+}
 
 // Fonction pour remonter en haut de la page lorsque le bouton est cliqué
 document
@@ -220,33 +222,32 @@ document
   });
 
 //carrousel topmovies
-const prev = document.getElementById('prev-btn')
-const next = document.getElementById('next-btn')
-const list = document.getElementById('top-movies')
+const prev = document.getElementById("prev-btn");
+const next = document.getElementById("next-btn");
+const list = document.getElementById("top-movies");
 
-const itemWidth = 150
-const padding = 10
+const itemWidth = 150;
+const padding = 10;
 
-prev.addEventListener('click',()=>{
-  list.scrollLeft -= itemWidth + padding
-})
+prev.addEventListener("click", () => {
+  list.scrollLeft -= itemWidth + padding;
+});
 
-next.addEventListener('click',()=>{
-  list.scrollLeft += itemWidth + padding
-})
+next.addEventListener("click", () => {
+  list.scrollLeft += itemWidth + padding;
+});
 //caroussel sf
-const prevSF = document.getElementById('prev-btn-sci-fi-movies')
-const nextSF = document.getElementById('next-btn-sci-fi-movies')
-const listSF = document.getElementById('sci-fi-movies')
+const prevSF = document.getElementById("prev-btn-sci-fi-movies");
+const nextSF = document.getElementById("next-btn-sci-fi-movies");
+const listSF = document.getElementById("sci-fi-movies");
 
+prevSF.addEventListener("click", () => {
+  listSF.scrollLeft -= itemWidth + padding;
+});
 
-prevSF.addEventListener('click',()=>{
-  listSF.scrollLeft -= itemWidth + padding
-})
-
-nextSF.addEventListener('click',()=>{
-  listSF.scrollLeft += itemWidth + padding
-})
+nextSF.addEventListener("click", () => {
+  listSF.scrollLeft += itemWidth + padding;
+});
 //caroussel romance
 const prev_romance = document.getElementById("prev-btn-romance-movies");
 const next_romance = document.getElementById("next-btn-romance-movies");
@@ -264,7 +265,6 @@ next_romance.addEventListener("click", () => {
 const prev_drama = document.getElementById("prev-btn-drama-movies");
 const next_drama = document.getElementById("next-btn-drama-movies");
 const list_drama = document.getElementById("drama-movies");
-
 
 prev_drama.addEventListener("click", () => {
   list_drama.scrollLeft -= itemWidth + padding;
