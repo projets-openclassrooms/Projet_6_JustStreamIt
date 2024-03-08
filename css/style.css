@@ -5,6 +5,67 @@ nav {
   padding: 10px; /* Marge intérieure */
 }
 
+/* Basic styles */
+
+.logo img {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 20px; /* Espacement entre le logo et le menu */
+}
+
+.menu-toggle button {
+  display: none; /* Caché par défaut sur les grands écrans */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Media query pour activer le bouton sur les petits écrans */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Caché par défaut sur les petits écrans */
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 50px;
+    left: 125px;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .menu.active {
+    display: flex; /* Afficher lorsque le menu est activé */
+  }
+
+  .menu-toggle button {
+    display: block; /* Afficher le bouton sur les petits écrans */
+  }
+  .search {
+    display: none; /* Masquer l'input sur les petits écrans */
+  }
+}
+
 .icons {
   display: inline-block;
   vertical-align: middle;
@@ -32,19 +93,20 @@ h2 {
 
 .best-movies-container {
   position: relative;
-  text-align:;
   left: 0;
   /*display: flex;
-  */height: 100%;
+  */
+  height: 100%;
   margin-top: 10%;
   max-width: 10000px;
-  border-radius: 5px;
-  /*Coinsarrondis*/border: 5px solid black;
-   /* Bordure avec liseré noir du container des films*/:;
+  /*Coins arrondis*/
+  border: 5px solid black;
+  /* Bordure avec liseré noir du container des films*/
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  border-radius: 5px;
 }
 #best {
   width: 29%;
@@ -57,40 +119,27 @@ h2 {
   bottom: 0;
   right: 0;
   text-align: center;
-  display:block;
+  display: block;
   text-align: center;
-  /* -webkit-box-shadow: 0px 0px 7px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    0px 0px 7px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         0px 0px 7px 0px rgba(50, 50, 50, 0.75); */
 }
-/* .bestCover-in-top
-{
-    /* width:100%;
-    height:90%; */
-    /* position: relative;
-    background: #AEEAAE; */
-    /* position: absolute; */
-    /* top: 78.5px;
-    left: 20px;
-} */ */
+
 .bestCover-in-middle {
   display: flex;
   justify-content: center;
   text-align: center;
   vertical-align: middle;
-
-  /* align-items: center; */
-  /* background: #EAC5B3; */
 }
 #button_play {
   font-size: 1.5em;
-  /*Tailledelapoliceaugmentée*/padding: 15px 30px;
-  /*Rembourrageplusgrand*/border-radius: 25px;
-   /* Coins arrondis */
+  /*Taille de la police augmentée*/
+  padding: 15px 30px;
+  /*Rembourrage plus grand*/
+  /* Coins arrondis */
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+  border-radius: 25px;
   margin-left: 5px;
 }
 #button_play:hover {
@@ -98,52 +147,52 @@ h2 {
   color: rgb(255, 38, 0);
   font-size: 1.1875em;
   margin-left: 5px;
- }
+}
 #btn-best-movie {
-    /*width:100%;
+  /*width:100%;
     height:44%;
     background: rgb(255, 38, 0);
-    */width: 150px;
-    height: 50px;
-    border-radius: 25px;
-    background-color: red;
-    color: white;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: 50px;
+    */
+  width: 150px;
+  height: 50px;
+
+  background-color: red;
+  color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 50px;
+  border-radius: 25px;
 }
 #btn-best-movie:hover {
-  background-color: darkred;}
+  background-color: darkred;
+}
 
 .movies {
   border-radius: 5px; /* Coins arrondis */
   display: flex;
   /* overflow-x: auto; */
   gap: 20px;
-
 }
 #bestImage {
-    /* position: relative; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* vertical-align: left; */
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: 50px;
-    height: 250px;
-    display: block;
-
+  /* position: relative; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* vertical-align: left; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 50px;
+  height: 250px;
+  display: block;
 }
-
 
 #bestDescription {
   margin: 0;
@@ -153,7 +202,6 @@ h2 {
   margin-bottom: 5px; /* Marge inférieure */
   width: auto;
   height: 50%;
-
 }
 
 .movie {
@@ -175,7 +223,6 @@ h2 {
   margin-top: 10px;
   text-align: center;
 }
-
 /* Modal styles */
 .modal {
   display: none;
@@ -183,8 +230,8 @@ h2 {
   z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* Utilisation de la largeur de l'écran */
+  height: 100vh; /* Utilisation de la hauteur de l'écran */
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -196,6 +243,9 @@ h2 {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
+  max-width: 90%; /* Ajustement de la largeur maximale pour s'adapter à l'écran */
+  max-height: 90%; /* Ajustement de la hauteur maximale pour s'adapter à l'écran */
+  overflow: auto; /* Activation du défilement si nécessaire */
 }
 
 .close {
@@ -204,60 +254,60 @@ h2 {
   right: 10px;
   cursor: pointer;
 }
-button{
+
+button {
   border-radius: 5px;
   cursor: pointer;
   color: white;
   background: red;
-  transition:800ms ease all;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
+
+  -webkit-transition: 800ms ease all;
+  -moz-transition: 800ms ease all;
+  -ms-transition: 800ms ease all;
+  -o-transition: 800ms ease all;
+  transition: 800ms ease all;
 }
 
 .container {
-width: 100%;
-height: 80%;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: white;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 
 .carousel-view {
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 10px;
-padding: 44px 0;
-transition: all 0.25s ease-in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  transition: all 0.25s ease-in;
 }
 
 .carousel-view .item-list {
-  
-max-width: 950px;
-width: 70vw;
-padding: 50px 10px;
-display: flex;
-gap: 48px;
-scroll-behavior: smooth;
-transition: all 0.25s ease-in;
--ms-overflow-style: none; /* IE and Edge */
-overflow: auto;
-scroll-snap-type: x mandatory;
+  max-width: 950px;
+  width: 70vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow: auto;
+  scroll-snap-type: x mandatory;
 }
-
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .item-list::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
 .prev-btn*,
 .next-btn* {
-background : none;
-cursor: pointer;
+  background: none;
+  cursor: pointer;
 }
 
 /* Styles pour le bouton "Haut de page" */
