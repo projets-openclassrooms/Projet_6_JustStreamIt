@@ -1,149 +1,164 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Just Stream It !</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
     <header>
-        <nav role="navigation">
-            <div>
-                <a href="index.html" class="icons">
-                    <img src="images/logo.png" alt="Logo JustStreamIt" id="logo">
-                </a>
-                <a href="index.html" class="menu"> Accueil </a>
-                <div class="dropdown">
-                    <div class="dropdown-content">
-                        <a href="#Best-movies">Best Movies</a>
-                        <a href="#top-movies">Top Movies</a>
-                        <a href="#sci-fi-movies">Sci-Fi Movies</a>
-                        <a href="#romance-movies">Romance Movies</a>
-                        <a href="#drama-movies">Drama Movies</a>
-                    </div>
-                </div>
-            </div>
-            <input type="text" class="search" placeholder="Rechercher un film ou une sÃ©rie">
-        </nav>
-    </header>
-    <div id="Best-movies" class="best-movies-container">
-
-            <p id="best-movie-description"></p>
-            <h1 id="bestTitle"</h1>
-
-            <button id="button_play"></button>
-            <p id="bestDescription"></p>
-            <div id="best">
-                <!-- <div class="bestCover-in-top"> -->
-
-                    <div class="bestCover-in-middle">
-                        <img src=""  class="bestCover" id="bestImage"/>
-                    <!-- </div> -->
-                        <button id="btn-best-movie" ></button>
-                </div>
-            </div>
-            
-    </div>
-
-
-   
-
-    <div   class="movies-container">
-        <h2>Films les mieux notés</h2>
-        <div id="" class="container">
-            <div class="carousel-view">
-              <button id="prev-btn" class="prev-btn">
-               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
-            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
-          </svg>
-              </button>
-              <div  id="top-movies"    class="item-list">
-               
-                 
-                  </div>
-              <button id="next-btn" class="next-btn">
-                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
-            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
-          </svg>
-                  </button>
-              </div>
-          </div>
-    </div>
-
-    <div   class="movies-container">
-        <h2>Sci-fi  Movies</h2>
-        <div id="" class="container">
-            <div class="carousel-view">
-              <button id="prev-btn-sci-fi-movies" class="prev-btn">
-               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
-            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
-          </svg>
-              </button>
-              <div  id="sci-fi-movies"    class="item-list">
-               
-                 
-                  </div>
-              <button id="next-btn-sci-fi-movies" class="next-btn">
-                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
-            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
-          </svg>
-                  </button>
-              </div>
-          </div>
-    </div>
-    <div   class="movies-container">
-        <h2>Romance Movies</h2>
-        <div id="" class="container">
-            <div class="carousel-view">
-              <button id="prev-btn-romance-movies" class="prev-btn">
-               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
-            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
-          </svg>
-              </button>
-              <div  id="romance-movies"    class="item-list">
-               
-                 
-                  </div>
-              <button id="next-btn-romance-movies" class="next-btn">
-                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
-            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
-          </svg>
-                  </button>
-              </div>
-          </div>
-    </div>
-
-    <div   class="movies-container">
-        <h2>Drama Movies</h2>
-        <div id="" class="container">
-            <div class="carousel-view">
-              <button id="prev-btn-drama-movies" class="prev-btn">
-               <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
-            <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
-          </svg>
-              </button>
-              <div  id="drama-movies"    class="item-list">
-               
-                 
-                  </div>
-              <button id="next-btn-drama-movies" class="next-btn">
-                    <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
-            <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
-          </svg>
-                  </button>
-              </div>
-          </div>
-    </div>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modal-info"></div>
+      <nav>
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo JustStreamIt" id="logo" />
         </div>
+        <div class="menu-toggle">
+          <button onclick="toggleMenu()">
+            Menu <span class="arrow">&#9660;</span>
+            <!-- Ajout de l'icône de la flèche vers le bas -->
+          </button>
+        </div>
+        <ul class="menu">
+          <li><a href="#Best-movies">Best Movies</a></li>
+          <li><a href="#top-movies">Top Movies</a></li>
+          <li><a href="#sci-fi-movies">Sci-Fi Movies</a></li>
+          <li><a href="#romance-movies">Romance Movies</a></li>
+          <li><a href="#drama-movies">Drama Movies</a></li>
+        </ul>
+        <input
+          type="text"
+          class="search"
+          placeholder="Rechercher un film ou une série"
+        />
+      </nav>
+    </header>
+    <section>
+      <div id="Best-movies" class="best-movies-container">
+        <p id="best-movie-description"></p>
+        <h1 id="bestTitle">Titre de la vidéo</h1>
+
+        <button type="button" id="button_play">Play</button>
+        <p id="bestDescription"></p>
+        <div id="best">
+          <!-- <div class="bestCover-in-top"> -->
+
+          <div class="bestCover-in-middle">
+            <img
+              alt="bestImage"
+              class="bestCover"
+              id="bestImage"
+              src="images/refresh.png"
+            />
+            <!-- </div> -->
+            <button type="button" id="btn-best-movie"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="movies-container">
+        <h2>Films les mieux notés</h2>
+        <div class="container">
+          <div class="carousel-view">
+            <button id="prev-btn" class="prev-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
+                />
+              </svg>
+            </button>
+            <div id="top-movies" class="item-list"></div>
+            <button id="next-btn" class="next-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="movies-container">
+        <h2>Sci-fi Movies</h2>
+        <div class="container">
+          <div class="carousel-view">
+            <button id="prev-btn-sci-fi-movies" class="prev-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
+                />
+              </svg>
+            </button>
+            <div id="sci-fi-movies" class="item-list"></div>
+            <button id="next-btn-sci-fi-movies" class="next-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="movies-container">
+        <h2>Romance Movies</h2>
+        <div class="container">
+          <div class="carousel-view">
+            <button type="button" id="prev-btn-romance-movies" class="prev-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
+                />
+              </svg>
+            </button>
+            <div id="romance-movies" class="item-list"></div>
+            <button type="button" id="next-btn-romance-movies" class="next-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="movies-container">
+        <h2>Drama Movies</h2>
+        <div class="container">
+          <div class="carousel-view">
+            <button type="button" id="prev-btn-drama-movies" class="prev-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z"
+                />
+              </svg>
+            </button>
+            <div id="drama-movies" class="item-list"></div>
+            <button type="button" id="next-btn-drama-movies" class="next-btn">
+              <svg viewBox="0 0 512 512" width="20">
+                <path
+                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-info"></div>
+      </div>
     </div>
-    <button id="btnScrollToTop" class="scroll-to-top">&#9650</button>
+    <button type="button" id="btnScrollToTop" class="scroll-to-top">
+      &#9650;
+    </button>
     <script src="js/netflix.js"></script>
-<!--    <script src="js/test_script.js"></script>-->
-</body>
+    <!--    <script src="js/test_script.js"></script>-->
+  </body>
 </html>
